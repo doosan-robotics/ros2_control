@@ -141,10 +141,10 @@ std::unordered_map<std::string, std::string> parse_parameters_from_xml(
  * \return std::vector< std::__cxx11::string > list of interface types
  * \throws std::runtime_error if the interfaceType text not set in a tag
  */
-components::InterfaceInfo parse_interfaces_from_xml(
+InterfaceInfo parse_interfaces_from_xml(
   const tinyxml2::XMLElement * interfaces_it)
 {
-  hardware_interface::components::InterfaceInfo interface;
+  InterfaceInfo interface;
 
   const std::string interface_name = get_attribute_value(
     interfaces_it, kNameAttribute, interfaces_it->Name());
